@@ -1,24 +1,24 @@
-# Compiled class file
-*.class
+class Main{
+     static int harShadNumber(int n){
+        int sum=0;
+        int rem=0;
+        while(n>0){
 
-# Log file
-*.log
+            rem=n%10;
+            sum=sum+rem;
+            n/=10;
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+        }
+        return sum;
+    }
+    public static void main(String[]args){
+        int num=156;
+        int sum1=harShadNumber(num);
+        if(num%sum1==0){
+            System.out.println("Harshad Number");
+        }
+        else{
+            System.out.println("Not harshad");
+        }
+    }
+}
